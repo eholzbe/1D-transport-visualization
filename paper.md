@@ -1,4 +1,4 @@
-Visualization of Solute Transport in 1D Free and Porous Media Flow
+# Visualization of Solute Transport in 1D Free and Porous Media Flow
 
 Ekkehard Holzbecher
 
