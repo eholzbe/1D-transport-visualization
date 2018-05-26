@@ -6,11 +6,11 @@ Ekkehard Holzbecher
 
 In the real world environment flow of fluids is mostly 3-dimensional (3D), but there are various situations in which a 1D perception is convenient. Neglecting all velocity variations, flow in rivers, canals, pipes and other conduits may be described by a single average velocity. Column experiments in laboratories are designed to reduce the complexity of flow fields and allow the use of a single velocity value. In blood vessels flow is mainly 1D. Aside from hydrodynamics the concept of 1D flow is appropriate in certain situations of aerodynamics.  Also concerning fracture and groundwater flow in the sub-surface the 1D view is often allowed abstracting from all existing heterogeneities. In literature this is often referred to as the plug flow model.
 The migration of a solute or a dissolved substance in a flowing fluid is determined by several processes. Some of these are of physical, others are of chemical, biochemical, geochemical or biogeochemical nature. The processes that govern the fate of an individual species can be grouped in four basic classes: 
-* •	Advection
-* •	Diffusion/dispersion
-* •	Decay / degradation
-* •	Sorption
-Altogether these determine the transport of a solute or dissolved chemical specie in a fluid. Mathematically this is expressed in a differential equation for the concentration c of the species:
+* Advection
+* Diffusion/dispersion
+* Decay / degradation
+* Sorption
+* Altogether these determine the transport of a solute or dissolved chemical specie in a fluid. Mathematically this is expressed in a differential equation for the concentration c of the species:
 (1)
 with parameters *R*, *D*, *v* and *λ*. *x* and *t* denote the space and time. Each of the four parameters is related to one of the processes mentioned above. *v* is the velocity that determines advective flux. *D* is the diffusivity that describes diffusive and more general dispersive processes. *λ* is the decay constant describing linear decay or degradation processes. *R* is the retardation factor which emerges from fast ad- and desorption processes. In rivers and streams retardation is also caused by the exchange with retention zones (Marion et al. 2008).    
 Concerning the source of the species two basic scenarios have to be distinguished. In one there is an initial concentration that is locally elevated; in the other there is a permanent leaking into the fluid. For 1D flow these are the instantaneous plane source and the constant inflow model cases.    
@@ -41,11 +41,11 @@ Figure 5
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
 Due to its minimal design and user-friendly implementation the 1D transport simulator is extremely useful teaching transport processes in fields of hydro- and aerodynamics as well as in porous media flow.            
-References 
-Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
-Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). https://doi:10.1007/978-3-642-22042-5 
-Holzbecher, Ekkehard, 2015. “Improved Evaluation of Analytical Solutions of the 1D Transport Equation”, Addendum to Holzbecher, 2012. “Environmental Modeling – using MATLAB”. https://www.researchgate.net/publication/281898072_Improved_Evaluation_of_Analytical_Solutions_of_the_1D_Transport_Equation
-Holzbecher, Ekkehard 2017. “Generalizing the concept of retardation factors”. Toxicological & Environmental Chemistry 9(7-8): 1096-1116. https://doi:10.1080/02772248.2016.1241881
-Marion, Andrea, Mattia Zaramella, Andrea Bottacin-Busolin 2008. “Solute transport in rivers with multiple storage zones: the STIR model”, Water Resources Research 44, W10406. https://doi:10.1029/2008WR007037
-van Genuchten, Martinus Th. 1981. “Analytical solutions for chemical transport with simultaneous adsorption, zero-order production and first-order decay”. J. of Hydrology 49: 213-233. https://doi:10.1016/0022-1694(81)90214-6
-Wexler, Eliezer J. 1992.  “Analytical solutions for one-, two-, and three-dimensional solute transport in groundwater systems with uniform flow”. Techniques of Water-Resources Investigations of the United States Geological Survey, Book 3, Chapter B7. https://pubs.er.usgs.gov/publication/twri03B7
+# References 
+* Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
+* Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). https://doi:10.1007/978-3-642-22042-5 
+* Holzbecher, Ekkehard, 2015. “Improved Evaluation of Analytical Solutions of the 1D Transport Equation”, Addendum to Holzbecher, 2012. “Environmental Modeling – using MATLAB”. https://www.researchgate.net/publication/281898072_Improved_Evaluation_of_Analytical_Solutions_of_the_1D_Transport_Equation
+* Holzbecher, Ekkehard 2017. “Generalizing the concept of retardation factors”. Toxicological & Environmental Chemistry 9(7-8): 1096-1116. https://doi:10.1080/02772248.2016.1241881
+* Marion, Andrea, Mattia Zaramella, Andrea Bottacin-Busolin 2008. “Solute transport in rivers with multiple storage zones: the STIR model”, Water Resources Research 44, W10406. https://doi:10.1029/2008WR007037
+* van Genuchten, Martinus Th. 1981. “Analytical solutions for chemical transport with simultaneous adsorption, zero-order production and first-order decay”. J. of Hydrology 49: 213-233. https://doi:10.1016/0022-1694(81)90214-6
+* Wexler, Eliezer J. 1992.  “Analytical solutions for one-, two-, and three-dimensional solute transport in groundwater systems with uniform flow”. Techniques of Water-Resources Investigations of the United States Geological Survey, Book 3, Chapter B7. https://pubs.er.usgs.gov/publication/twri03B7
