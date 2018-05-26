@@ -8,6 +8,7 @@ Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Sprin
 In addition to the original version 2.0 includes the following features:
 - indication of physical units for time T and length L
 - option to switch between 'instantaneous source' and 'constant inflow'
-- save figure
+- improved numerical evaluation  
+- save figure option
 - improved colouring
 - optimized appearance for MAC and WINDOWS
