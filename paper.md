@@ -24,10 +24,12 @@ with .
 *c<sub>in</sub>* denotes the concentration at the inflow position *x*=0. The solution was derived by van Genuchten (1981) for a general decay term –*μc* in equation (1). Following Wexler (1992) we use here *μ=λR*. This is based on the assumption that the degradation process is active in the dissolved and in the adsorbed state (Holzbecher 2017).   
 The 1D transport simulator software visualizes the spatial and temporal development of a species concentration under the combined influence of all four processes and for both of the source scenarios. A first version was presented by Holzbecher in the textbook ‘Environmental Modeling – using MATLAB’ in 2007 and than extended in the second edition (Holzbecher 2012). Some crucial problems with the numerical implementation of the book versions are overcome as described by Holzbecher (2015).    
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
+
 ![Figure 1](Fig1.png)
 ### Figure 1: The Graphical User Interface of the 1D transport Simulator
 The output is initiated at pressing the ‘Run’ button. It shows concentration profiles and breakthrough curves in two panels. The result for the instantaneous source model with default parameters is given in Figure 2. 
 
+![Figure 2](Fig2.png)
 ### Figure 2: Output for the default instantaneous source model
 As a real system that is represented by this simulator model one may imagine a column in a laboratory of 1 m length. A fluid is flowing within the column with a velocity of 1 cm/min. The diffusivity is 1 cm<sup>2</sup>/min. An experiment in the column is run over a time period of 100 min. 
 The upper figure shows concentration profiles, i.e. the concentration distribution in a column at 10 time instants during the experiment. The lower figure depicts breakthrough curves, i.e. the concentration development measured at ten sensors equidistantly located along the column. 
