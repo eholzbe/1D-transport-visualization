@@ -10,7 +10,8 @@ The migration of a solute or a dissolved substance in a flowing fluid is determi
 * Diffusion/dispersion
 * Decay / degradation
 * Sorption
-* Altogether these determine the transport of a solute or dissolved chemical specie in a fluid. Mathematically this is expressed in a differential equation for the concentration c of the species:
+* 
+Altogether these determine the transport of a solute or dissolved chemical specie in a fluid. Mathematically this is expressed in a differential equation for the concentration c of the species:
 (1)
 with parameters *R*, *D*, *v* and *λ*. *x* and *t* denote the space and time. Each of the four parameters is related to one of the processes mentioned above. *v* is the velocity that determines advective flux. *D* is the diffusivity that describes diffusive and more general dispersive processes. *λ* is the decay constant describing linear decay or degradation processes. *R* is the retardation factor which emerges from fast ad- and desorption processes. In rivers and streams retardation is also caused by the exchange with retention zones (Marion et al. 2008).    
 Concerning the source of the species two basic scenarios have to be distinguished. In one there is an initial concentration that is locally elevated; in the other there is a permanent leaking into the fluid. For 1D flow these are the instantaneous plane source and the constant inflow model cases.    
@@ -41,7 +42,7 @@ Figure 5
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
 Due to its minimal design and user-friendly implementation the 1D transport simulator is extremely useful teaching transport processes in fields of hydro- and aerodynamics as well as in porous media flow.            
-# References 
+## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
 * Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). https://doi:10.1007/978-3-642-22042-5 
 * Holzbecher, Ekkehard, 2015. “Improved Evaluation of Analytical Solutions of the 1D Transport Equation”, Addendum to Holzbecher, 2012. “Environmental Modeling – using MATLAB”. https://www.researchgate.net/publication/281898072_Improved_Evaluation_of_Analytical_Solutions_of_the_1D_Transport_Equation
