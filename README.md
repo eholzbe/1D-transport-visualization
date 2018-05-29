@@ -1,7 +1,7 @@
 # 1D-transport-visualization
 Visualization of Solute Transport in 1D Free and Porous Media Flow
 
-Version 2-0 is extended from the original version, published in the textbook: 
+Version 2.0 is extended from the original version, published in the textbook: 
 
 Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). doi:10.1007/978-3-642-22042-5
 
