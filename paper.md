@@ -19,14 +19,13 @@ with parameters *R*, *D*, *v* and *λ*. *x* and *t* denote the space and time. E
 Concerning the source of the species two basic scenarios have to be distinguished. In one there is an initial concentration that is locally elevated; in the other there is a permanent leaking into the fluid. For 1D flow these are the instantaneous plane source and the constant inflow model cases.    
 The instantaneous plane source model is based on the assumption that the initial concentration is infinitely high and located in a single point. While this is physically not possible, mathematically it allows the derivation of an analytical expression for *c* at times *t*>0 after introduction of the specie in the fluid and positions x>0 downstream from the original source:  
 
-![Equation 2](Equ2.png)    (2)
+![Equation 2](Eqn2.gif)    (2)
 
 According to Häfner et al. (1992) the solution was first derived by Angermann in 1989. *M*<sub>0</sub> is the total mass introduced at time *t*=0 at position *x*=0 put into an environment in which the concerned species was not present before. 
 In the other generic scenario it is assumed that there is inflow with a constant concentration 
 
-![Equation 3](Equ3.png)    (3)
+![Equation 3](Eqn3.gif)    (3)
 
-with .
 *c<sub>in</sub>* denotes the concentration at the inflow position *x*=0. The solution was derived by van Genuchten (1981) for a general decay term –*μc* in equation (1). Following Wexler (1992) we use here *μ=λR*. This is based on the assumption that the degradation process is active in the dissolved and in the adsorbed state (Holzbecher 2017).   
 The 1D transport simulator software visualizes the spatial and temporal development of a species concentration under the combined influence of all four processes and for both of the source scenarios. A first version was presented by Holzbecher in the textbook ‘Environmental Modeling – using MATLAB’ in 2007 and than extended in the second edition (Holzbecher 2012). Some crucial problems with the numerical implementation of the book versions are overcome as described by Holzbecher (2015).    
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
