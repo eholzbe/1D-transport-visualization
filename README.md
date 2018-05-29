@@ -13,4 +13,4 @@ In addition to the original version 2.0 includes the following features:
 - improved colouring
 - optimized appearance for MAC and WINDOWS
 
-The project aims finally to perform the inverse task: automatic estimation of parameters for observed profiles and breakthtrough curves.The user is supposed to enter these measured data, choose the parameters to be estimated (maximum 3 because of uniqueness concerns). Then the program computes best fit parameter values.   
+The project aims finally to perform the inverse task: automatic estimation of parameters for observed profiles and breakthrough curves.The user is supposed to enter these measured data, choose the parameters to be estimated (maximum 3 because of uniqueness concerns). The program then will compute best fit parameter values.   
