@@ -27,6 +27,11 @@ In the other generic scenario it is assumed that there is inflow with a constant
 ![Equation 3](Eqn3.gif)    (3)
 
 *c<sub>in</sub>* denotes the concentration at the inflow position *x*=0. The solution was derived by van Genuchten (1981) for a general decay term –*μc* in equation (1). Following Wexler (1992) we use here *μ=λR*. This is based on the assumption that the degradation process is active in the dissolved and in the adsorbed state (Holzbecher 2017).   
+A third option is the model with oscillatory boundary condition on one side. The solution is given by (Sommerfeld 1949, Suzuki 1960):
+![Equation 4](Eqn4.gif)    (4)
+with ![Equation 5](Eqn5.gif)    (5)
+and ![Equation 6](Eqn5a.gif). *c<sub>0</sub>*
+
 The 1D transport simulator software visualizes the spatial and temporal development of a species concentration under the combined influence of all four processes and for both of the source scenarios. A first version was presented by Holzbecher in the textbook ‘Environmental Modeling – using MATLAB’ in 2007 and than extended in the second edition (Holzbecher 2012). Some crucial problems with the numerical implementation of the book versions are overcome as described by Holzbecher (2015).    
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
 
@@ -53,6 +58,11 @@ Figure 5 deals with a situation in which sorption processes are involved. Here t
 
 ![Figure 5](Fig5.png)
 #### Figure 5: Output for the default constant inflow model with additional retardation 
+Figure 6 depicts an example run of the model with oscillatory boundary condition. Instead of maximum time the time period is to be specified by the user. Decay is considered in this model. The corresponding input field is de-activated.
+
+![Figure 6](Fig6.png)
+#### Figure 6: Output for an example model withoscillatory boundary condition 
+
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
 Due to its minimal design and user-friendly implementation the 1D transport simulator is extremely useful teaching transport processes in fields of hydro- and aerodynamics as well as in porous media flow.            
@@ -62,5 +72,7 @@ Due to its minimal design and user-friendly implementation the 1D transport simu
 * Holzbecher, Ekkehard, 2015. “Improved Evaluation of Analytical Solutions of the 1D Transport Equation”, Addendum to Holzbecher, 2012. “Environmental Modeling – using MATLAB”. https://www.researchgate.net/publication/281898072_Improved_Evaluation_of_Analytical_Solutions_of_the_1D_Transport_Equation
 * Holzbecher, Ekkehard 2017. “Generalizing the concept of retardation factors”. Toxicological & Environmental Chemistry 9(7-8): 1096-1116. https://doi:10.1080/02772248.2016.1241881
 * Marion, Andrea, Mattia Zaramella, Andrea Bottacin-Busolin 2008. “Solute transport in rivers with multiple storage zones: the STIR model”, Water Resources Research 44, W10406. https://doi:10.1029/2008WR007037
+* Sommerfeld, Arnold. 1949. “Partial Differential Equations in Physics”, Academic Press, London.
+* Suzuki, Saitaro. 1960. “Percolation measurements based on heat flow through soil with special reference to paddy fields”. J. Geophys. Res. 65(9): 2883-2885.
 * van Genuchten, Martinus Th. 1981. “Analytical solutions for chemical transport with simultaneous adsorption, zero-order production and first-order decay”. J. of Hydrology 49: 213-233. https://doi:10.1016/0022-1694(81)90214-6
 * Wexler, Eliezer J. 1992.  “Analytical solutions for one-, two-, and three-dimensional solute transport in groundwater systems with uniform flow”. Techniques of Water-Resources Investigations of the United States Geological Survey, Book 3, Chapter B7. https://pubs.er.usgs.gov/publication/twri03B7
