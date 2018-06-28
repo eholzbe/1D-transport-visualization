@@ -244,6 +244,7 @@ for i = 1:size(t,2)
     set (hh,'LineWidth',2)
     hold on;     
 end
+xlim ([0 L]);
 if l > 1 ylim ([0 1]); end
 set(gca,'XTick',[L/10:L/10:L]);
 grid on
@@ -272,6 +273,7 @@ for j = 1:10
         hold on;
     end    
 end
+xlim ([0 T]);
 if l > 1 ylim ([0 1]); end
 set(gca,'XTick',[T/10:T/10:T]);
 grid on
