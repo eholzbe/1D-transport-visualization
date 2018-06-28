@@ -30,7 +30,7 @@ In the other generic scenario it is assumed that there is inflow with a constant
 A third option is the model with oscillatory boundary condition on one side. The solution is given by (Sommerfeld 1949, Suzuki 1960):
 ![Equation 4](Eqn4.gif)    (4)
 with ![Equation 5](Eqn5.gif)    (5)
-and ![Equation 6](Eqn5a.gif). *c<sub>0</sub>*
+and ![Equation 6](Eqn5a.gif). *Δc<sub>0</sub>* is the maximum amplitude describing the oscillation at the boundary x=0. T denotes the length of oscillation time period at the boundary. Equation (4) delivers the deviation from a reference concentration, which is not used in the computations of this program. This option does not consider degradation.
 
 The 1D transport simulator software visualizes the spatial and temporal development of a species concentration under the combined influence of all four processes and for both of the source scenarios. A first version was presented by Holzbecher in the textbook ‘Environmental Modeling – using MATLAB’ in 2007 and than extended in the second edition (Holzbecher 2012). Some crucial problems with the numerical implementation of the book versions are overcome as described by Holzbecher (2015).    
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
