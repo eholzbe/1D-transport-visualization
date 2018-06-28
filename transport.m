@@ -225,28 +225,42 @@ cin = 1;   % inflow concentration, for constant inflow
 
 %Calculate data
 map = colormap; y = map(1:7:end,:);
-u = sqrt(v*v+4*lambda*R*D);
-
+if l > 1
+    if l > 2
+        omega = 2*pi/T; V = v/2/D; K = R*omega/2/D;
+        s = sqrt(.25*V^4+K*K); b = sqrt(-.5*V*V+s); a = -V+sqrt(.5*V*V+s);
+    else
+        u = sqrt(v*v+4*lambda*R*D);
+    end
+end 
 % Create space plot
 t = linspace (T/10,T,10);
 e = ones (1,101);
 axes(handles.xaxes);
 x = linspace(0,L,101); 
 for i = 1:size(t,2)      
-    if l > 1
+    switch l
+        case 1
+        hh = plot (x,Min*exp(-lambda*t(i))*exp(-(R*x-e*v*t(i)).^2./(4*D*t(i)*R))./...
+        (2.*sqrt(pi*D*t(i)/R)),'color',y(mod(i,10)+1,:));
+        case 2
         h = 1./(2.*sqrt(D*R*t(i)));
         hh = plot (x,cin*0.5*(exp(((v-u)/(D+D)*x)+log(erfc(h*(R*x-e*u*t(i)))))+...
         exp(((v+u)/(D+D)*x)+log(erfc(h*(R*x+e*u*t(i)))))),'color',y(mod(i,10)+1,:));
-    else
-        hh = plot (x,Min*exp(-lambda*t(i)).*exp(-(R*x-e*v*t(i)).^2./(4*D*t(i)*R))./...
-        (2.*sqrt(pi*D*t(i)/R)),'color',y(mod(i,10)+1,:));
+        case 3
+        hh = plot (x,exp(-lambda*t(i))*exp(-a*x).*sin(e*omega*t(i)-b*x),'color',y(mod(i,10)+1,:));
     end
     set (hh,'LineWidth',2)
     hold on;     
 end
-xlim ([0 L]);
-if l > 1 ylim ([0 1]); end
-set(gca,'XTick',[L/10:L/10:L]);
+xlim ([0 L]); set(gca,'XTick',[L/10:L/10:L]);
+if l > 1 
+    if l > 2
+        ylim ([-1 1])
+    else    
+        ylim ([0 1]); 
+    end
+end
 grid on
 lgd = legend (['0-' num2str(T/10)],[num2str(T/10) '-' num2str(T/5)],[num2str(T/5) '-' num2str(.3*T)],...
     [num2str(.3*T) '-' num2str(.4*T)],[num2str(.4*T) '-' num2str(T/2)],[num2str(T/2) '-' num2str(.6*T)],...
@@ -261,21 +275,24 @@ axes(handles.taxes);
 for j = 1:10
     t = linspace (T*(j-1)/10,T*j/10,11);
     for i = 1:size(x,2)
-        if l > 1
+        switch l
+            case 1
+            hh = plot(t,Min*exp(-lambda*t).*exp(-(e*R*x(i)-v*t).^2./(4*D*t*R))./...
+                (2*sqrt(pi*D*t/R)),'color',y(mod(j,10)+1,:));
+            case 2
             h = 1./(2.*sqrt(D*R*t));
             hh = plot(t,cin*0.5*(exp(((v-u)/(D+D)*x(i))+log(erfc(h.*(e*R*x(i)-u*t))))+...
             exp(((v+u)/(D+D)*x(i))+log(erfc(h.*(e*R*x(i)+u*t))))),'color',y(mod(j,10)+1,:)); 
-        else
-            hh = plot(t,Min*exp(-lambda*t).*exp(-(e*R*x(i)-v*t).^2./(4*D*t*R))./...
-                (2*sqrt(pi*D*t/R)),'color',y(mod(j,10)+1,:));
+            case 3
+            hh = plot (t,exp(-lambda*t).*exp(-e*a*x(i)).*sin(omega*t-e*b*x(i)),...
+                'color',y(mod(j,10)+1,:));    
         end
         set (hh,'LineWidth',2) 
         hold on;
     end    
 end
-xlim ([0 T]);
-if l > 1 ylim ([0 1]); end
-set(gca,'XTick',[T/10:T/10:T]);
+xlim ([0 T]); set(gca,'XTick',[T/10:T/10:T]);
+if l == 2 ylim ([0 1]); end
 grid on
 hold off
 axes(handles.xaxes); 
@@ -346,7 +363,13 @@ function listbox1_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns listbox1 contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from listbox1
-
+if get(handles.listbox1,'Value') == 3
+    set(handles.lambda_edit,'Enable','off');
+    set(handles.text9,'String','Time period');
+else
+    set(handles.lambda_edit,'Enable','on');
+    set(handles.text9,'String','Max. time');
+end
 
 % --- Executes during object creation, after setting all properties.
 function listbox1_CreateFcn(hObject, eventdata, handles)
