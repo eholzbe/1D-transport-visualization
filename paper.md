@@ -32,7 +32,7 @@ The 1D transport simulator software visualizes the spatial and temporal developm
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
 
 ![Figure 1](Fig1.png)
-#### Figure 1: The Graphical User Interface of the 1D transport Simulator
+#### Figure 1: The Graphical User Interface of the 1D transportfit Simulator
 The output is initiated at pressing the ‘Run’ button. It shows concentration profiles and breakthrough curves in two panels. The result for the instantaneous source model with default parameters is given in Figure 2. 
 
 ![Figure 2](Fig2.png)
@@ -43,7 +43,7 @@ The colouring of the curves allows an easy connection between the two figures. C
 The colours help to understand the connection between profile and breakthrough curves. At the observation points at the end of the coloured time periods the same values can be recognized in both figures. In the shown example at the end of ‘blue’ period the concentration at the first downstream sensor is around 0.09, which can be taken from the green curve in the profile figure and from the first breakthrough curve changing colour from blue to light blue. At the same position at the end of the ‘light blue’ period a value of 0.02 for c can be identified in both figures.   
 The simulator provides easy visual evaluation of the influence of parameter changes. The example in Figure 3 shows the effect of velocity. The left sub-plots show profile and breakthrough output for the default constant inflow case. On the right the corresponding figures are shown, delivered by the software for an increased velocity *v*=2! The fluid is flowing faster through the 1D system. Thus the profile curves move to the right, while the breakthrough curves are shifted to the left.
 
-![Figure 3a](Fig3a.png)
+<img src="Fig3a.pmg" alt="drawing" width="200"/>
 ![Figure 3b](Fig3b.png)
 #### Figure 3: Output for the default constant inflow model compared with the case of doubled velocity 
 For the default parameter setting (*D*=1, *v*=1, *λ*=0, *R*=1) only the processes of diffusion and advection are considered. Using the transport simulator the additional effect of decay, degradation and sorption processes can be studied. Here two examples are selected for demonstration.  Figure 4 depicts the output when decay is added to the default case with constant inflow. In the profile curves a constant decline of the front maximum can be observed. This is also nicely visualized in the breakthrough curves, which with increasing downstream position reach lower stationary values.  
