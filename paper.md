@@ -80,11 +80,19 @@ What was described so far is more precisely referred to as forward modelling. Th
 Parameter estimation requires some observations from the real system as input. Most often this is a series of concentrations, measured at one or several observation points. These may have been obtained from a laboratory or field experiment, or have been measured in the field under certain conditions. These breakthrough curves are input for an algorithm in which the parameter values are adjusted over and over again until the output for forward modeling runs fits with the measured data. 
 In the program the user may provide breakthrough curves from several observation points for estimating up to three out of the four of the input parameters (length and time are determined by the field data and are thus not variable). 
 
-![Figure 1](Fig6.png)
+![Figure 6](Fig6.png)
 #### Figure 6: Parameter estimation run, showing GUI with model output 
 
 Figure 6 shows the graphical user interface and the output. The model was run to estimate diffusivity and velocity: both corresponding buttons are checked. The user may have altered the values for both parameters or used the default settings. What was given there were initial values which are necessary to start the estimation algorithm and the values are overwritten at the successful end of the process by the optimal estimates, the final outcome aim of inverse modelling. 
-The given breakthrough curve was measured at position *x*=2, which here correspoind with the end position of the model, in lab experiments often the outlet position. It is depicted in the breakthrough curve figure by black circles.  
+The given breakthrough curve was measured at position *x*=2, which here correspoind with the end position of the model, in lab experiments often the outlet position. It is depicted in the breakthrough curve figure by black circles. The measured values obviously fit nicely with the simulated ones, that are depicted by the most right curve. As a value for the quality of the fit, the squared 2-norm of the fit is denoted in the bottom ribbon. The residuals denote the differences between measured and modelled values at the observation times. 
+
+Observation data are read from a file. Tthe import of the data is initiated by the 'Read data' button. First a file-select box appears, in which the filename and its directory have to be specified. Using the 'Options' button, one can chose the file-type (EXCEL, ASCII or all with corresponding extensions). Once the file is opened an import select box appears. 
+
+![Figure 7](Fig7.png)
+#### Figure 7: Input data select box, example for an ascii file and time series import 
+
+Using the curser the user highlights the data that are to be imported. In Figure 7 this is a column containing the time instants at which measurements are available. Change the name to 'tdata' as shown in the figure. Under ïmported dat' select 'Numeric Matrix", before hitting the final (green) checkmark for import. Now proceed in the same way with the other variables: highlight, name and import. Use the name 'cdata' for the measured variable names and 'xdata' for the positions of the observation points. Note that 'cdata' is a matrix, if there is more than one observation point. 
+Take care that the imported data-sets fulfill the following requirements: the length of 'tdata' corresponds to the size of 'cdata'. If the time instants are stored in column vectors, the observed values are also in a column vector; dito for rows. The number of entries in 'xdata' is equal to the second dimension of 'cdata'. 
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
