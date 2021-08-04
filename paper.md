@@ -99,8 +99,13 @@ Take care that the imported data-sets fulfill the following requirements: the le
 
 Returning back to the transportfit GUI, hit once into the window and push any button. When the corresponding message at the bottom of the interface has disappeared, you can proceed. Check your input data and if everything looks ok, do the modelling by hitting 'Run'. 
 
-'Save' button 
-'same file' checkbox
+![Figure 8](Fig8.png)
+#### Figure 8: Parameter estimation run with two measured breakthrough curves, showing GUI with model output 
+
+Figure 8 illustrates a test example with two breakthrough curves for the instantaneous source scenario. The breakthrough curves were in fact not obtained from real world measurements, but generated on a computer for testing purpose. For that reason the estimation was able to reach an error, measured by the square 2-norm, of almost zero.  
+
+The GUi has a 'Save' button, which saves the entire outcome of the programn to a graphics file.  
+The 'same file' checkbox enables the user to skip the file-select box and work directly on the same input file used before for import of breakthrough curves. Only data that are different have to be entered. Thus if the time instants are the same for the new run, it is not necessary to import them again. 
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
