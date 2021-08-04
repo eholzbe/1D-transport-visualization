@@ -111,6 +111,13 @@ Figure 8 illustrates a test example with two breakthrough curves for the instant
 The GUi has a 'Save' button, which saves the entire outcome of the programn to a graphics file.  
 The 'same file' checkbox enables the user to skip the file-select box and work directly on the same input file used before for import of breakthrough curves. Only data that are different have to be entered. Thus if the time instants are the same for the new run, it is not necessary to import them again. 
 
+## Heat Transport
+
+Heat conduction and heat convection are the major processes of heat transport. Heat conduction is analogous to diffusion, here levelling out temperature gradients. A differential equation can be deribed for heat transport that is very similar to equation (1). It is given by:
+
+<p align="center"> <img src="Eqn9.gif" alt="drawing"> (1) </p>
+
+
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
 * Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). https://doi:10.1007/978-3-642-22042-5 
