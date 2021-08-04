@@ -115,7 +115,7 @@ The 'same file' checkbox enables the user to skip the file-select box and work d
 
 Heat conduction and heat convection are the major processes of heat transport. Heat conduction is analogous to diffusion, here levelling out temperature gradients. A differential equation can be deribed for heat transport that is very similar to equation (1). It is given by:
 
-<p align="center"> <img src="Eqn9.gif" alt="drawing"> (1) </p>
+<p align="center"> <img src="Eqn4.gif" alt="drawing"> (4) </p>
 
 
 ## References 
