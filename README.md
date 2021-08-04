@@ -1,5 +1,5 @@
 # 1D-transport-visualization and parameter estimation
-Visualization of Transport in Plug Flow
+Visualization and Parameter Estimation of Transport in Plug Flow
 
 Version 1.0 of transportfit.m is extended from transport.m, published in the textbook: 
 
