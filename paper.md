@@ -88,11 +88,19 @@ The given breakthrough curve was measured at position *x*=2, which here correspo
 
 Observation data are read from a file. Tthe import of the data is initiated by the 'Read data' button. First a file-select box appears, in which the filename and its directory have to be specified. Using the 'Options' button, one can chose the file-type (EXCEL, ASCII or all with corresponding extensions). Once the file is opened an import select box appears. 
 
-![Figure 7](Fig7.png)
+<p align="center">
+  <img src="Fig7.png" alt="drawing" width="70%"/>
+</p>
 #### Figure 7: Input data select box, example for an ascii file and time series import 
 
 Using the curser the user highlights the data that are to be imported. In Figure 7 this is a column containing the time instants at which measurements are available. Change the name to 'tdata' as shown in the figure. Under ïmported dat' select 'Numeric Matrix", before hitting the final (green) checkmark for import. Now proceed in the same way with the other variables: highlight, name and import. Use the name 'cdata' for the measured variable names and 'xdata' for the positions of the observation points. Note that 'cdata' is a matrix, if there is more than one observation point. 
+Depending on the file type one may have to check the column delimiters. When reading from a 'csv'-file the delimeter will be set to 'Comma' automatically. For EXCEL files the user may have to adjust the setting. 
 Take care that the imported data-sets fulfill the following requirements: the length of 'tdata' corresponds to the size of 'cdata'. If the time instants are stored in column vectors, the observed values are also in a column vector; dito for rows. The number of entries in 'xdata' is equal to the second dimension of 'cdata'. 
+
+Returning back to the transportfit GUI, hit once into the window and push any button. When the corresponding message at the bottom of the interface has disappeared, you can proceed. Check your input data and if everything looks ok, do the modelling by hitting 'Run'. 
+
+'Save' button 
+'same file' checkbox
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
