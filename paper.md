@@ -64,7 +64,7 @@ Figure 5 deals with a situation in which sorption processes are involved. Here t
 Figure 6 depicts an example run of the model with oscillatory boundary condition. Instead of maximum time the time period is to be specified by the user. Decay is considered in this model. The corresponding input field is de-activated.
 
 ![Figure 6](Fig6.png)
-#### Figure 6: Output for an example model withoscillatory boundary condition 
+#### Figure 6: Output for an example model with oscillatory boundary condition 
 
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
