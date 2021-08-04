@@ -117,6 +117,7 @@ Heat conduction and heat convection are the major processes of heat transport. H
 
 <p align="center"> <img src="Eqn4.gif" alt="drawing"> (4) </p>
 
+for variable temperature *T*. *D-th* is the thermal diffusivity, and *k* the ratio of heat capacities.  
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
