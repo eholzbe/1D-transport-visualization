@@ -47,14 +47,21 @@ The simulator provides easy visual evaluation of the influence of parameter chan
   <img src="Fig3a.png" alt="drawing" width="50%"/>
   <img src="Fig3b.png" alt="drawing" width="50%"/>
 </p>
+
 #### Figure 3: Output for the default constant inflow model compared with the case of doubled velocity 
 For the default parameter setting (*D*=1, *v*=1, *λ*=0, *R*=1) only the processes of diffusion and advection are considered. Using the transport simulator the additional effect of decay, degradation and sorption processes can be studied. Here two examples are selected for demonstration.  Figure 4 depicts the output when decay is added to the default case with constant inflow. In the profile curves a constant decline of the front maximum can be observed. This is also nicely visualized in the breakthrough curves, which with increasing downstream position reach lower stationary values.  
 
-![Figure 4](Fig4.png)
+<p align="center">
+  <img src="Fig4.png" alt="drawing" width="50%"/>
+</p>
+
 #### Figure 4: Output for the default constant inflow model with additional degradation 
 Figure 5 deals with a situation in which sorption processes are involved. Here they induce a retardation *R*=2. The effect on the concentration distributions can be studied using the simulator. In comparison with the default shown on the left side of Figure 3 profiles are shifted to the left, breakthrough curves to the right.  
 
-![Figure 5](Fig5.png)
+<p align="center">
+  <img src="Fig5.png" alt="drawing" width="50%"/>
+</p>
+
 #### Figure 5: Output for the default constant inflow model with additional retardation 
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
