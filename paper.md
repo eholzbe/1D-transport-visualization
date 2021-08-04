@@ -76,7 +76,15 @@ Due to its minimal design and user-friendly implementation the 1D transport simu
 
 ## Parameter Estimation
 
-What was described so far is more precisely referred to as forward modelling. The parameters are known for a certain application in the real world and the simulation predicts the development, here by illustrating profiles and breakthrough curves. However, before one can expect that model produces something meaningful the parameter values must be known. Often some of them are not known. Then  can be succesfully Unknown parameter values are often determined by a parameter estimation procedure.
+What was described so far is more precisely referred to as forward modelling. The parameters are known for a certain application in the real world and the simulation predicts the development, here by illustrating profiles and breakthrough curves. However, before one can expect that model produces something meaningful the parameter values must be known. Often some of them are not known. Then a parameter estimation can be performed. The parameter value is then the unknowm. That's why the procedure is also referred to as inverse modeling. 
+Parameter estimation requires some observations from the real system as input. Most often this is a series of concentrations, measured at one or several observation points. These may have been obtained from a laboratory or field experiment, or have been measured in the field under certain conditions. These breakthrough curves are input for an algorithm in which the parameter values are adjusted over and over again until the output for forward modeling runs fits with the measured data. 
+In the program the user may provide breakthrough curves from several observation points for estimating up to three out of the four of the input parameters (length and time are determined by the field data and are thus not variable). 
+
+![Figure 1](Fig6.png)
+#### Figure 6: Parameter estimation run, showing GUI with model output 
+
+Figure 6 shows the graphical user interface and the output. The model was run to estimate diffusivity and velocity: both corresponding buttons are checked. The user may have altered the values for both parameters or used the default settings. What was given there were initial values which are necessary to start the estimation algorithm and the values are overwritten at the successful end of the process by the optimal estimates, the final outcome aim of inverse modelling. 
+The given breakthrough curve was measured at position *x*=2, which here correspoind with the end position of the model, in lab experiments often the outlet position. It is depicted in the breakthrough curve figure by black circles.  
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
