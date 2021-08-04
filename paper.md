@@ -54,6 +54,7 @@ The simulator provides easy visual evaluation of the influence of parameter chan
   <img src="Fig3a.png" alt="drawing" width="50%"/>
   <img src="Fig3b.png" alt="drawing" width="50%"/>
 </p>
+
 #### Figure 3: Output for the default constant inflow model compared with the case of doubled velocity 
 
 For the default parameter setting (*D*=1, *v*=1, *λ*=0, *R*=1) only the processes of diffusion and advection are considered. Using the transport simulator the additional effect of decay, degradation and sorption processes can be studied. Here two examples are selected for demonstration.  Figure 4 depicts the output when decay is added to the default case with constant inflow. In the profile curves a constant decline of the front maximum can be observed. This is also nicely visualized in the breakthrough curves, which with increasing downstream position reach lower stationary values.  
@@ -61,6 +62,7 @@ For the default parameter setting (*D*=1, *v*=1, *λ*=0, *R*=1) only the process
 <p align="center">
   <img src="Fig4.png" alt="drawing" width="70%"/>
 </p>
+
 #### Figure 4: Output for the default constant inflow model with additional degradation 
 
 Figure 5 deals with a situation in which sorption processes are involved. Here they induce a retardation *R*=2. The effect on the concentration distributions can be studied using the simulator. In comparison with the default shown on the left side of Figure 3 profiles are shifted to the left, breakthrough curves to the right.  
