@@ -117,7 +117,12 @@ Heat conduction and heat convection are the major processes of heat transport. H
 
 <p align="center"> <img src="Eqn4.gif" alt="drawing"> (4) </p>
 
-for variable temperature *T*. *D<sub>th</sub>* is the thermal diffusivity, and *𝜿* the ratio of heat capacities. *𝝆C* denotes heat capacities, the subscript *f* for fluid, and *sf* for the combined fluid-solid system.
+for variable temperature *T* and *D<sub>th</sub>* the thermal diffusivity. *𝝆C* denotes heat capacities, the subscript *f* for fluid.
+In porous medium, i.e.in soil and groundwater the equation has to be slightly modified:
+
+<p align="center"> <img src="Eqn4.gif" alt="drawing"> (5) </p>
+
+with *𝜿* the ratio of specific heat capacities. The subscript *sf* denotes the combined fluid-solid system.
 
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
