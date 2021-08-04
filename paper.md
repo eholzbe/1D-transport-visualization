@@ -4,6 +4,8 @@ Ekkehard Holzbecher
 
 *German Univ. of Technology in Oman (GUtech)*
 
+## Introduction
+
 In the real world environment flow of fluids is 3-dimensional (3D), but there are various situations in which a 1D perception is appropriate. Neglecting all velocity variations, fluid flow in rivers, canals, pipes and other conduits may be described by a single average velocity. Column experiments in laboratories are designed to reduce the complexity of flow. In blood vessels flow can be described as 1D. Soil scientists examine seepage in 1D, as the vertical component usually dominates. Similarly the connection between a surface water body and the underlying groundwater is often conceived as 1D. Hydrogeologists often deal with fracture and porous media flow in the sub-surface with the 1D models, abstracting from all existing heterogeneities. Even in aerodynamics the concept of 1D flow can be appropriate, if circumstances are fulfilled in a certain sub-region. In  the technical ansd scientific literature this is referred to as the plug flow.
 
 The migration of a solute or a dissolved substance in a flowing fluid is determined by several processes. Some of these are of physical, others are of chemical, biochemical, geochemical or biogeochemical nature. The processes that govern the fate of an individual species can be grouped in four basic classes: 
@@ -27,16 +29,21 @@ In the other generic scenario it is assumed that there is inflow with a constant
 
 <p align="center"> <img src="Eqn3.gif" alt="drawing"> (3) </p>
 
-*c<sub>in</sub>* denotes the concentration at the inflow position *x*=0. The solution was derived by van Genuchten (1981) for a general decay term –*μc* in equation (1). Following Wexler (1992) we use here *μ=λR*. This is based on the assumption that the degradation process is active in the dissolved and in the adsorbed state (Holzbecher 2017).   
+*c<sub>in</sub>* denotes the concentration at the inflow position *x*=0. The solution was derived by van Genuchten (1981) for a general decay term –*μc* in equation (1). Following Wexler (1992) we use here *μ=λR*. This is based on the assumption that the degradation process is active in the dissolved and in the adsorbed state (Holzbecher 2017).  
+
+## Visualization
+
 The 1D transport simulator software visualizes the spatial and temporal development of a species concentration under the combined influence of all four processes and for both of the source scenarios. A first version was presented by Holzbecher in the textbook ‘Environmental Modeling – using MATLAB’ in 2007 and than extended in the second edition (Holzbecher 2012). Some crucial problems with the numerical implementation of the book versions are overcome as described by Holzbecher (2015).    
 The simulator allows the input of the basic parameters in a graphical user interface. In addition to the four process parameters values for the length of the visualized system and the considered time period have to be specified.  Figure 1 depicts the GUI. The GUI also enables the choice of the source model.
 
 ![Figure 1](Fig1.png)
 #### Figure 1: The Graphical User Interface of the 1D transportfit Simulator
+
 The output is initiated at pressing the ‘Run’ button. It shows concentration profiles and breakthrough curves in two panels. The result for the instantaneous source model with default parameters is given in Figure 2. 
 
 ![Figure 2](Fig2.png)
 #### Figure 2: Output for the default instantaneous source model
+
 As a real system that is represented by this simulator model one may imagine a column in a laboratory of 1 m length. A fluid is flowing within the column with a velocity of 1 cm/min. The diffusivity is 1 cm<sup>2</sup>/min. An experiment in the column is run over a time period of 100 min. 
 The upper figure shows concentration profiles, i.e. the concentration distribution in a column at 10 time instants during the experiment. The lower figure depicts breakthrough curves, i.e. the concentration development measured at ten sensors equidistantly located along the column. 
 The colouring of the curves allows an easy connection between the two figures. Colours are connected with time periods, as given in the legend. The first time period is related to the blue colour, in which the breakthrough curve at the first sensor is steeply rising. The profile at the end of the ‘blue’ period is depicted in the upper figure in the very colour. What follows is a ‘light blue’ period, shown by a colour change of the breakthrough curves. The profile at the end of this period is depicted in light blue in the profile figure. 
@@ -47,25 +54,30 @@ The simulator provides easy visual evaluation of the influence of parameter chan
   <img src="Fig3a.png" alt="drawing" width="50%"/>
   <img src="Fig3b.png" alt="drawing" width="50%"/>
 </p>
-
 #### Figure 3: Output for the default constant inflow model compared with the case of doubled velocity 
+
 For the default parameter setting (*D*=1, *v*=1, *λ*=0, *R*=1) only the processes of diffusion and advection are considered. Using the transport simulator the additional effect of decay, degradation and sorption processes can be studied. Here two examples are selected for demonstration.  Figure 4 depicts the output when decay is added to the default case with constant inflow. In the profile curves a constant decline of the front maximum can be observed. This is also nicely visualized in the breakthrough curves, which with increasing downstream position reach lower stationary values.  
 
 <p align="center">
   <img src="Fig4.png" alt="drawing" width="70%"/>
 </p>
-
 #### Figure 4: Output for the default constant inflow model with additional degradation 
+
 Figure 5 deals with a situation in which sorption processes are involved. Here they induce a retardation *R*=2. The effect on the concentration distributions can be studied using the simulator. In comparison with the default shown on the left side of Figure 3 profiles are shifted to the left, breakthrough curves to the right.  
 
 <p align="center">
   <img src="Fig5.png" alt="drawing" width="70%"/>
 </p>
-
 #### Figure 5: Output for the default constant inflow model with additional retardation 
+
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
  The 1D transport simulator can be used in many of the above mentioned situations of 1D flow. Using previous knowledge or educated guesses concerning the few parameters the calculated concentration distributions can be of help in various respects. It may serve for the prediction of the spreading of a contaminant. Arrival times can be obtained. It can be checked if concentrations are above a critical limit at arrival. For lab or field experiments researchers obtain hints about the placement of sensors. 
-Due to its minimal design and user-friendly implementation the 1D transport simulator is extremely useful teaching transport processes in fields of hydro- and aerodynamics as well as in porous media flow.            
+Due to its minimal design and user-friendly implementation the 1D transport simulator is extremely useful teaching transport processes in fields of hydro- and aerodynamics as well as in porous media flow.  
+
+## Parameter Estimation
+
+What was described so far is more precisely referred to as forward modelling. The parameters are known for a certain application in the real world and the simulation predicts the development, here by illustrating profiles and breakthrough curves. However, before one can expect that model produces something meaningful the parameter values must be known. Often some of them are not known. Then  can be succesfully Unknown parameter values are often determined by a parameter estimation procedure.
+
 ## References 
 * Häfner, Frieder, Dietrich Sames, Hans-Dieter Voigt. 1992. “Wärme- und Stofftransport”. Springer Publ., Berlin. https://doi:10.1007/978-3-662-00982-6
 * Holzbecher, Ekkehard. 2012. “Environmental Modeling – using MATLAB”, Springer Publ., Heidelberg (2nd ed.). https://doi:10.1007/978-3-642-22042-5 
