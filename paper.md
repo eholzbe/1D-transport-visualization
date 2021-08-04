@@ -70,6 +70,7 @@ Figure 5 deals with a situation in which sorption processes are involved. Here t
 <p align="center">
   <img src="Fig5.png" alt="drawing" width="70%"/>
 </p>
+
 #### Figure 5: Output for the default constant inflow model with additional retardation 
 
 Concerning the physical units the program leaves the choice of length and time units to the user. In the GUI the letter T is used for an arbitrary time unit, the letter L for an arbitrary length unit. The user may choose these freely, but has to follow the choice by entering parameter values. For example: is the length unit is cm and the time unit min, the velocity value has to be given in cm/min, as indicated below the input field. Correspondingly the user has to stick with the T and L choice entering other parameter values. Only the retardation as dimensionless parameter is independent of the unit choice.      
@@ -93,6 +94,7 @@ Observation data are read from a file. Tthe import of the data is initiated by t
 <p align="center">
   <img src="Fig7.png" alt="drawing" width="70%"/>
 </p>
+
 #### Figure 7: Input data select box, example for an ascii file and time series import 
 
 Using the curser the user highlights the data that are to be imported. In Figure 7 this is a column containing the time instants at which measurements are available. Change the name to 'tdata' as shown in the figure. Under ïmported dat' select 'Numeric Matrix", before hitting the final (green) checkmark for import. Now proceed in the same way with the other variables: highlight, name and import. Use the name 'cdata' for the measured variable names and 'xdata' for the positions of the observation points. Note that 'cdata' is a matrix, if there is more than one observation point. 
