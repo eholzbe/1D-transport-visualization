@@ -4,10 +4,11 @@ Ekkehard Holzbecher
 
 *German Univ. of Technology in Oman (GUtech)*
 
-In the real world environment flow of fluids is mostly 3-dimensional (3D), but there are various situations in which a 1D perception is convenient. Neglecting all velocity variations, flow in rivers, canals, pipes and other conduits may be described by a single average velocity. Column experiments in laboratories are designed to reduce the complexity of flow fields and allow the use of a single velocity value. In blood vessels flow is mainly 1D. Aside from hydrodynamics the concept of 1D flow is appropriate in certain situations of aerodynamics.  Also concerning fracture and groundwater flow in the sub-surface the 1D view is often allowed abstracting from all existing heterogeneities. In literature this is often referred to as the plug flow model.
+In the real world environment flow of fluids is 3-dimensional (3D), but there are various situations in which a 1D perception is appropriate. Neglecting all velocity variations, fluid flow in rivers, canals, pipes and other conduits may be described by a single average velocity. Column experiments in laboratories are designed to reduce the complexity of flow. In blood vessels flow can be described as 1D. Soil scientists examine seepage in 1D, as the vertical component usually dominates. Similarly the connection between a surface water body and the underlying groundwater is often conceived as 1D. Hydrogeologists often deal with fracture and porous media flow in the sub-surface with the 1D models, abstracting from all existing heterogeneities. Even in aerodynamics the concept of 1D flow can be appropriate, if circumstances are fulfilled in a certain sub-region. In  the technical ansd scientific literature this is referred to as the plug flow.
+
 The migration of a solute or a dissolved substance in a flowing fluid is determined by several processes. Some of these are of physical, others are of chemical, biochemical, geochemical or biogeochemical nature. The processes that govern the fate of an individual species can be grouped in four basic classes: 
 * Advection
-* Diffusion/dispersion
+* Diffusion / dispersion
 * Decay / degradation
 * Sorption
  
